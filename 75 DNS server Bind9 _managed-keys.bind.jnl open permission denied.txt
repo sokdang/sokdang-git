@@ -1,0 +1,5 @@
+75-DNS server (Bind9): managed-keys.bind.jnl: open: permission denied
+managed-keys-zone: keyfetch_done:dns_journal_open -> unexpected error
+managed-keys-zone: error during managed-keys processing (unexpected error): DNSSEC validation may be at risk
+
+*Open terminal -> $sudo systemctl status named -> $sudo chown root:bind /var/cache/bind/managed-keys.bind.jnl -> $sudo systemctl restart named -> $sudo systemctl status named
